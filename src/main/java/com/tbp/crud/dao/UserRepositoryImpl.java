@@ -15,7 +15,7 @@ public class UserRepositoryImpl implements UserRepository {
     private static final String GET_USER_BY_ID = "SELECT * FROM user WHERE id=?";
     private static final String DELETE_USER_BY_ID = "DELETE FROM user WHERE id=?";
     private static final String GET_USERS_QUERY = "SELECT * FROM user";
-    private static final String GET_BY_NAME ="SELECT * FROM USER WHERE fnName=?";
+    private static final String GET_BY_NAME ="SELECT * FROM user WHERE fnName=?";
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
@@ -54,13 +54,13 @@ public class UserRepositoryImpl implements UserRepository {
                     rs.getString("lsName"), rs.getString("email"));
         });
     }
-  /*
+
     @Override
     public List<User> allUsersByName() {
         return jdbcTemplate.query(GET_BY_NAME, (rs, rowNum) -> {
             return new User(rs.getInt("id"), rs.getString("fnName"),
                     rs.getString("lsName"), rs.getString("email"));
         });
-    }*/
+    }
 
 }
