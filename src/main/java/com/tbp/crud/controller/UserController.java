@@ -38,9 +38,9 @@ public class UserController {
         return userRepository.deleteById(id);
     }
 
-   /*
+
     @GetMapping("/users/{fnName}")
     public List<User> getUsersByName(@PathVariable("fsName") String fsName) {
         return userRepository.allUsersByName();
-    }*/
+    }
 }
